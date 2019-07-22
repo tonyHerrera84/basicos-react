@@ -1,5 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Fragment} from 'react';
+import PrimerComponente from './components/PrimerComponente';
+import ComponteFuncional from './components/ComponteFuncional';
+
 import './App.css';
 
 function App() {
@@ -8,11 +10,15 @@ function App() {
     trabajo: 'Fotografo'
   }
   return (
-    <div className="App">
-      <header className="App-header">
-        {empleado.nombre}, {empleado.trabajo}
-      </header>
-    </div>
+    <Fragment>
+      <div className="App">
+        <header className="App-header">
+          {empleado.nombre}, {empleado.trabajo}
+          <PrimerComponente />
+          <ComponteFuncional />
+        </header>
+      </div>
+    </Fragment>
   );
 }
 
