@@ -11,13 +11,13 @@ function App() {
   }
   return (
     <Fragment>
-      <div className="App">
+      {/* <div className="App">
         <header className="App-header">
           {empleado.nombre}, {empleado.trabajo}
           <PrimerComponente />
           <ComponteFuncional />
         </header>
-      </div>
+      </div> */}
     </Fragment>
   );
 }
