@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+import Producto from './Producto';
 
 class Productos extends Component {
 
@@ -8,11 +9,20 @@ class Productos extends Component {
             {id: 2, name: 'Camisa VueJS', precio: 33},
             {id: 3, name: 'Camisa ReactJS', precio: 23},
             {id: 4, name: 'Camisa NodeJS', precio: 44}
-        ]
+        ],
+        totalCarrito: 500,
+        cliente: 'Antonio Herrera'
     }
     render() {
+        const {productos} = this.state;
+        
         return (
-            <h1>Lista de productos</h1>
+            <Fragment>
+                <h1>Lista de productos</h1>
+                {productos.map( producto => (
+                    <Producto key={producto.id} producto={producto} />
+                ))}
+            </Fragment>
         );
     }
 }
